@@ -1,6 +1,6 @@
 import React from 'react'
 import './homePage.scss'
-import Searchbar from '../components/searchbar/Searchbar'
+import Searchbar from '../../components/searchbar/Searchbar'
 
 
 function HomePage() {
