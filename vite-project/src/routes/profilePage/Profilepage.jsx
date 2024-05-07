@@ -1,39 +1,49 @@
-import React from 'react'
-import './profilepage.scss'
-function Profilepage() {
+// import Chat from "../../components/chat/Chat";
+import List from "../../components/list/List";
+import "./profilepage.scss";
+
+function ProfilePage() {
   return (
-    <div classNAme='profilepage'>
+    <div className="profilePage">
       <div className="details">
         <div className="wrapper">
           <div className="title">
             <h1>User Information</h1>
             <button>Update Profile</button>
           </div>
-
           <div className="info">
             <span>
-              Avatar:{""}
-              <img src='https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D' alt='userprofile'/>
-              <span> Username: <b>John Doe</b></span>
-              <span> Email: <b>john@gmail.com</b></span>
+              Avatar:
+              <img
+                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+            </span>
+            <span>
+              Username: <b>John Doe</b>
+            </span>
+            <span>
+              E-mail: <b>john@gmail.com</b>
             </span>
           </div>
-
           <div className="title">
             <h1>My List</h1>
             <button>Create New Post</button>
           </div>
-
+          <List />
           <div className="title">
             <h1>Saved List</h1>
           </div>
+          <List />
         </div>
       </div>
       <div className="chatContainer">
-        <div className="wrapper"></div>
+        <div className="wrapper">
+          {/* <Chat/> */}
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Profilepage
+export default ProfilePage;
