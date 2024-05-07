@@ -7,6 +7,8 @@ import {
 import Layout from './routes/layout/Layout';
 import SinglePage from './routes/singlePage/SinglePage';
 import Profilepage from './routes/profilePage/Profilepage';
+import Login from './routes/login/Login';
+
 
 
 function App() {
@@ -30,6 +32,10 @@ function App() {
         {
           path:"/profile",
           element:<Profilepage/>
+        },
+        {
+          path:"/login",
+          element:<Login/>
         }
 
 
