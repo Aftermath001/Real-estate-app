@@ -1,9 +1,50 @@
-import React from 'react'
-import './profilepage.scss'
-function Profilepage() {
+import Chat from "../../components/chat/Chat";
+import List from "../../components/list/List";
+import {Link} from 'react-router-dom'
+import "./profilepage.scss";
+
+function ProfilePage() {
   return (
-    <div>Profilepage</div>
-  )
+    <div className="profilePage">
+      <div className="details">
+        <div className="wrapper">
+          <div className="title">
+            <h1>User Information</h1>
+            <Link to='/profileupdatepage'><button>Update Profile</button></Link>
+          </div>
+          <div className="info">
+            <span>
+              Avatar:
+              <img
+                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt=""
+              />
+            </span>
+            <span>
+              Username: <b>John Doe</b>
+            </span>
+            <span>
+              E-mail: <b>john@gmail.com</b>
+            </span>
+          </div>
+          <div className="title">
+            <h1>My List</h1>
+            <Link to='/newpostpage'><button>Create New Post</button></Link>
+          </div>
+          <List />
+          <div className="title">
+            <h1>Saved List</h1>
+          </div>
+          <List />
+        </div>
+      </div>
+      <div className="chatContainer">
+        <div className="wrapper">
+          <Chat/>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Profilepage
+export default ProfilePage;
