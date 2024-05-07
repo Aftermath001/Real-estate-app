@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Layout from './routes/layout/Layout';
 import SinglePage from './routes/singlePage/SinglePage';
+import Profilepage from './routes/profilePage/Profilepage';
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
         {
           path:"/:id",
           element:<SinglePage/>
+        },
+        {
+          path:"/profile",
+          element:<Profilepage/>
         }
 
 
